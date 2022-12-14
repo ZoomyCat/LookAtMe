@@ -87,7 +87,7 @@ end
 
 -- ------------------------- Update ------------------------
 
-function LookAtMe.Update() -- 
+function LookAtMe.Update()
     if os.clock() - self.UpdateTimer > 1 or self.FirstRun == true then
         self.UpdateTimer = os.clock()
         if self.BotToggle == true then
