@@ -1,0 +1,6 @@
+[Module]
+Name=LookAtMe
+Version=1
+Files=LookAtMe.lua
+Dependencies=minionlib
+Enabled=1
