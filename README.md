@@ -11,3 +11,4 @@ This project requires [MMOMinion](https://www.mmominion.com/misc.php?page=ffxivb
 ## Things to keep in mind   
     -You are at fault if you use this script & get banned for it, not I.
     -This script uses TELEPORT HACKS. Only use it on accounts you don't mind losing! (Free trials etc)
+    -This hack is dead simple, the full version is much more in depth but far more destructive, so this is all I'll be releasing to the public.
