@@ -1,6 +1,5 @@
 # LookAtMe
 This project requires [MMOMinion](https://www.mmominion.com/misc.php?page=ffxivbot), a FFXIV botting client, in order to function & run.
- A MMOMinion add-on for when you just want to be as annoying as possible.
  This add-on is dead simple. Turn it on & watch as the first person who targets you gets TP'd to directly above.
  The add-on will stay on the earliest to-target you person, & hop to the 2nd earliest, once the 1st has stopped.
 
