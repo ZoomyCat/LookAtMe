@@ -41,6 +41,7 @@ self.SaveLastCheck  = Now()
 self.UpdateTimer    = os.clock()
 self.BotToggle      = false
 self.FirstRun       = true
+self.TeleportTo     = false
 
 -- ------------------------- GUI ------------------------
 
@@ -55,7 +56,7 @@ self.GUI = {
 -- ------------------------- Style ------------------------
 
 self.Style.MainWindow = {
-    Size        = { Width = 150, Height = 100 },
+    Size        = { Width = 200, Height = 100 },
 }
 
 -- ------------------------- Log ------------------------
@@ -92,8 +93,10 @@ function LookAtMe.Update()
         self.UpdateTimer = os.clock()
         if self.BotToggle == true then
             local el = EntityList("targetingme")
-            for _,v in pairs(el) do
-                Hacks:TeleportToXYZ(v.pos.x, v.pos.y+2, v.pos.z)
+            if self.TeleportTo == true then
+                for _,v in pairs(el) do
+                    Hacks:TeleportToXYZ(v.pos.x, v.pos.y+2, v.pos.z)
+                end
             end
         end
     end
@@ -112,6 +115,10 @@ function LookAtMe.MainWindow(event, tickcount)
         GUI:Checkbox('Enable Bot', self.BotToggle)
         if GUI:IsItemClicked() == true then
             self.BotToggle = not self.BotToggle
+        end
+        GUI:Checkbox('Teleport on target', self.TeleportTo)
+        if GUI:IsItemClicked() == true then
+            self.TeleportTo = not self.TeleportTo
         end
         GUI:End()
     end
